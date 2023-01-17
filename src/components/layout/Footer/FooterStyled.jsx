@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Foot = styled.footer`
-  position: relative;
-  top: 75vh;
   background-color: #000000;
   color: #fff;
   padding: 2em;
@@ -13,7 +11,8 @@ export const Foot = styled.footer`
     justify-content: center;
     list-style-type: none;
 
-    li {
+    li a{
+        color: #fff;
       margin: 0 1em;
 
       &:hover {

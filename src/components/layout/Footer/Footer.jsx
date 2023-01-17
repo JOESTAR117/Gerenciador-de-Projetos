@@ -7,16 +7,19 @@ function Footer(){
         <Foot>
           <ul className='social_list'>
             <li>
-                <FaFacebook />
+                <a href="https://www.facebook.com/junior.rios.739326/" target= "_blank"><FaFacebook /></a>
+                
             </li>
             <li>
-                <FaInstagram />
+                <a href="https://www.instagram.com/jackson_luis1/" target= "_blank"><FaInstagram /></a>
+                
             </li>
             <li>
-                <FaLinkedin />
+                <a href="https://www.linkedin.com/in/jackson117/" target= "_blank"><FaLinkedin /></a>
+                
             </li>
             <li>
-                <FaGithub/>
+                <a href="https://github.com/JOESTAR117" target= "_blank"><FaGithub/></a>
             </li>
             </ul>  
             <p className='copy_right'>

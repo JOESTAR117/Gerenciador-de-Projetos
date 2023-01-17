@@ -8,8 +8,10 @@ export const GlobalStyled = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
 
     html, body , #root{
-      background-color: #efefef;
-      height: 100%;
+      background-color: #ffffff;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden;
     }
   }
 

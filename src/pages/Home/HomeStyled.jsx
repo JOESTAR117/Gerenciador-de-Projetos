@@ -25,8 +25,8 @@ p{
 }
 
 img{
-    width: 350px;
-    margin: 2em 0;
+    max-width: 350px;
+    margin: 1em 0;
 }
 
 `

@@ -28,6 +28,7 @@ export const Nav = styled.nav`
         color: #fff;
         text-decoration: none;
         transition: all 0.3s;
+        font-size: 1.1em;
 
         &:hover {
           color: #29abe1;

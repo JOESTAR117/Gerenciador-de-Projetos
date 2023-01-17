@@ -10,6 +10,7 @@ export const Foot = styled.footer`
     display: flex;
     justify-content: center;
     list-style-type: none;
+ 
 
     li a{
         color: #fff;

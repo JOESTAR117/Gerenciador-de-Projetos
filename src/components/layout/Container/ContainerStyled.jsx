@@ -6,7 +6,6 @@ export const Div = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   flex-wrap: wrap;
-  min-height: 75vh;
 
   .start {
     justify-content: flex-start;

@@ -10,7 +10,6 @@ export const GlobalStyled = createGlobalStyle`
     html, body , #root{
       background-color: #ffffff;
       width: 100vw;
-      height: 100vh;
       overflow-x: hidden;
       
     }

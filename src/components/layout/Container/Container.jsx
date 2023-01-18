@@ -1,7 +1,7 @@
-import { Div } from "./ContainerStyled";
+import { Cont} from "./ContainerStyled";
 
 function Container(props) {
-  return <Div>{props.children}</Div>;
+  return <Cont>{props.children}</Cont>;
 }
 
 export default Container;

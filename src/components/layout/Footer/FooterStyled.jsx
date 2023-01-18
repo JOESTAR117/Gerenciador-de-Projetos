@@ -5,15 +5,14 @@ export const Foot = styled.footer`
   color: #fff;
   padding: 2em;
   text-align: center;
-
   .social_list {
     display: flex;
     justify-content: center;
     list-style-type: none;
- 
+    flex-wrap: wrap;
 
-    li a{
-        color: #fff;
+    li a {
+      color: #fff;
       margin: 0 1em;
 
       &:hover {

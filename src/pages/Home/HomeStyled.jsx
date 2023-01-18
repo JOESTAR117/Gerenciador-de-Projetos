@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-width: 100vw;
+width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -27,6 +27,7 @@ p{
 img{
     max-width: 350px;
     margin: 1em 0;
+
 }
 
 `

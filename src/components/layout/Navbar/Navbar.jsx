@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../../images/costs_logo.png";
-import { Div } from "../Container/ContainerStyled";
+import { Cont } from "../Container/ContainerStyled";
 import { Nav } from "./NavbarStyled";
 
 function Navbar() {
   return (
     <Nav>
-      <Div>
+      <Cont>
         <Link to="/">
           <img src={logo} alt="Logo jojo coin" />
         </Link>
@@ -24,7 +24,7 @@ function Navbar() {
             <Link to="/contact">Contato</Link>
           </li>
         </ul>
-      </Div>
+      </Cont>
     </Nav>
   );
 }

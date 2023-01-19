@@ -13,6 +13,7 @@ export const Card = styled.div`
     padding: 0.4em;
     margin-bottom: 1.3em;
     font-size: 1.3em;
+    border-radius: 10px;
   }
   p {
     color: #7a7a7af2;

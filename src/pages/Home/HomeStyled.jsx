@@ -16,6 +16,7 @@ h1{
         color: #29abe1;
         padding: 0 0.2em;
         background-color: #000;
+        border-radius: 10px;
     }
 }
 

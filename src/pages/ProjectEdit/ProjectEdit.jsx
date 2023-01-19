@@ -24,7 +24,7 @@ function ProjectEdit() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/projects/${id}`, {
+      fetch(`https://my-json-server.typicode.com/JOESTAR117/BackendFalse/projects/${id}`, {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -48,7 +48,7 @@ function ProjectEdit() {
       return false;
     }
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`https://my-json-server.typicode.com/JOESTAR117/BackendFalse/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -83,7 +83,7 @@ function ProjectEdit() {
     }
     project.cost = newCost;
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`https://my-json-server.typicode.com/JOESTAR117/BackendFalse/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -108,7 +108,7 @@ function ProjectEdit() {
     projectUpdate.services = serviceUpdate;
     projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost);
 
-    fetch(`http://localhost:5000/projects/${projectUpdate.id}`, {
+    fetch(`https://my-json-server.typicode.com/JOESTAR117/BackendFalse/projects/${projectUpdate.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

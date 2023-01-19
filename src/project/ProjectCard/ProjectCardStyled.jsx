@@ -4,7 +4,8 @@ export const Card = styled.div`
   padding: 1em;
   border: 1px solid #7a7a7a;
   border-radius: 5px;
-  margin: 0 auto;
+  margin-right: 1em;
+  align-items: center;
 
 
   h4 {
@@ -28,6 +29,7 @@ export const Card = styled.div`
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: flex-start;
 
     span {
       display: block;

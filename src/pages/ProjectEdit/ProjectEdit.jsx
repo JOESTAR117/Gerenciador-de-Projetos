@@ -10,11 +10,13 @@ import Container from "../../components/layout/Container/Container";
 import ProjectForm from "../../project/ProjectForm/ProjectForm";
 import Message from "../../components/layout/Message/Message";
 import ServiceForm from "../../components/layout/Service/ServiceForm";
+import ServiceCard from "../../components/layout/Service/ServiceCard"
 
 function ProjectEdit() {
   const { id } = useParams();
 
   const [project, setProject] = useState([]);
+  const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showServiceForm, setShowServiceForm] = useState(false);
   const [message, setMessage] = useState();
@@ -31,6 +33,7 @@ function ProjectEdit() {
         .then((resp) => resp.json())
         .then((data) => {
           setProject(data);
+          setServices(data.services);
         })
         .catch((error) => console.error(error.message));
     }, 500);
@@ -63,7 +66,7 @@ function ProjectEdit() {
   }
 
   function createService(project) {
-    setMessage('')
+    setMessage("");
     const lastService = project.services[project.services.length - 1];
 
     lastService.id = uuidv4();
@@ -80,17 +83,22 @@ function ProjectEdit() {
     }
     project.cost = newCost;
 
-    fetch(`http://localhost:5000/projects/${project.id}`,{
-        method: 'PATCH',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body:JSON.stringify(project)
-    }).then(resp => resp.json())
-    .then((data) =>{
-        console.log(data);
+    fetch(`http://localhost:5000/projects/${project.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(project),
     })
-    .catch(err => console.error(err.message))
+      .then((resp) => resp.json())
+      .then((data) => {
+        setShowServiceForm(false)
+      })
+      .catch((err) => console.error(err.message));
+  }
+
+  function removeService(){
+
   }
 
   function toggleProjectForm() {
@@ -155,7 +163,20 @@ function ProjectEdit() {
             </div>
             <h2>Serviços</h2>
             <Container customClass="start">
-              <p>item de Serviços</p>
+              {services.length > 0 &&
+                services.map((service) => (
+                    <ServiceCard 
+                    id={service.id}
+                    name={service.name}
+                    cost={service.cost}
+                    description={service.description}
+                    key={service.id}
+                    handleRemove={removeService}
+                    />
+                ))
+              }
+
+              {services.length === 0 && <p>Não há serviços cadastrados</p>}
             </Container>
           </Container>
         </ProEdit>

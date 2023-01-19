@@ -7,13 +7,31 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 300,
+      "cost": 2552,
       "services": [
         {
           "cost": "300",
           "name": "eu",
           "description": "hk",
           "id": "765c4bbc-b618-42c0-ba37-6fd62aa8074b"
+        },
+        {
+          "name": "boa noite",
+          "cost": "2000",
+          "description": "ds",
+          "id": "0a9834cc-7329-4ad5-838f-80e209057e3e"
+        },
+        {
+          "name": "asdasasd",
+          "cost": "22",
+          "description": "s",
+          "id": "8fa07b49-ea83-4314-8861-430d98db5df7"
+        },
+        {
+          "name": "ds",
+          "cost": "230",
+          "description": "Vai dormi",
+          "id": "95364cc9-5a63-4d89-9c90-339a574cee73"
         }
       ],
       "id": 2
@@ -36,8 +54,15 @@
         "id": "3",
         "name": "Designer"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 3200,
+      "services": [
+        {
+          "name": "jornal2",
+          "cost": "3200",
+          "description": "testando",
+          "id": "0fd41c2a-ed50-4a5a-9322-73bd9b7893e8"
+        }
+      ],
       "id": 5
     },
     {

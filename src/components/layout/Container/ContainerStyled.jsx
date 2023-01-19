@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Cont = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto;
   flex-wrap: wrap;
 

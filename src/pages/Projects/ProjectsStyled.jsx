@@ -4,6 +4,7 @@ export const Projectss = styled.div`
   padding: 3em;
   width: 100%;
   .title_container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;

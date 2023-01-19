@@ -4,8 +4,8 @@ export const Card = styled.div`
   padding: 1em;
   border: 1px solid #7a7a7a;
   border-radius: 5px;
-  width: 24%;
-  margin: 0.5%;
+  margin: 0 auto;
+
 
   h4 {
     background-color: #000000;
@@ -26,6 +26,7 @@ export const Card = styled.div`
 
   .category_text {
     display: flex;
+    width: 100%;
     align-items: center;
 
     span {
@@ -54,10 +55,10 @@ export const Card = styled.div`
     margin-top: 1.2em;
     display: flex;
     align-items: center;
-    width: 100%;
 
     a,
     button {
+ 
       text-decoration: none;
       border: none;
       background-color: #ffffff;

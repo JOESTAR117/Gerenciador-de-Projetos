@@ -7,8 +7,15 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 300,
+      "services": [
+        {
+          "cost": "300",
+          "name": "eu",
+          "description": "hk",
+          "id": "765c4bbc-b618-42c0-ba37-6fd62aa8074b"
+        }
+      ],
       "id": 2
     },
     {
@@ -23,8 +30,8 @@
       "id": 4
     },
     {
-      "name": "jornal",
-      "budget": "10000",
+      "name": "Joestar news",
+      "budget": "4000",
       "category": {
         "id": "3",
         "name": "Designer"
@@ -32,6 +39,17 @@
       "cost": 0,
       "services": [],
       "id": 5
+    },
+    {
+      "name": "fut",
+      "budget": "20000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
     }
   ],
   "categories": [

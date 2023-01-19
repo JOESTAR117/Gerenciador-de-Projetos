@@ -8,7 +8,7 @@ function SelectForm({ text, name, options, handleOnChange, value }) {
         name={name}
         id={name}
         onChange={handleOnChange}
-        defaultValue={value || ""}
+        value={value || ""}
       >
         <option>Selecione uma opção</option>
         {options.map((options) => (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Cont } from "../../components/layout/Container/ContainerStyled";
+import Container from "../../components/layout/Container/Container";
 import LinkButton from "../../components/layout/LinkButton/LinkButton";
 import Loading from "../../components/layout/Loading/Loading";
 
@@ -65,7 +65,7 @@ function Projects() {
 
       {projectMessage && <Message type="success" msg={projectMessage} />}
 
-      <Cont>
+      <Container>
         <div className="start">
           {projects.length > 0 &&
             projects.map((project) => (
@@ -83,7 +83,7 @@ function Projects() {
             <p>Não há projetos cadastrados!</p>
           )}
         </div>
-      </Cont>
+      </Container>
     </Projectss>
   );
 }

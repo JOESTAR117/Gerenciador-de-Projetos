@@ -36,7 +36,7 @@ export const Card = styled.div`
       margin-right: 5px;
     }
 
-    .infra {
+    .Infra {
       background-color: #ffaebc;
     }
     .Desenvolvimento {

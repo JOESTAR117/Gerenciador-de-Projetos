@@ -5,11 +5,10 @@ import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 import { Card } from "./ProjectCardStyled";
 
 function ProjectCard({ id, name, budget, category, handleRemove }) {
-
   const remove = (e) => {
-    e.preventDefault()
-    handleRemove(id)
-  }
+    e.preventDefault();
+    handleRemove(id);
+  };
 
   return (
     <Card>
@@ -21,7 +20,7 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
         <span className={category}></span> {category}
       </p>
       <div className="actions">
-        <Link to="/">
+        <Link to={`/project/${id}`}>
           <BsPencil /> Editar
         </Link>
         <button onClick={remove}>

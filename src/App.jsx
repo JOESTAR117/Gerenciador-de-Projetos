@@ -7,6 +7,7 @@ import Container from "./components/layout/Container/Container";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Footer from "./components/layout/Footer/Footer";
 import Projects from "./pages/Projects/Projects";
+import ProjectEdit from "./pages/ProjectEdit/ProjectEdit";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/newproject" element={<NewProject />} />
+
+          <Route path="/project/:id" element={<ProjectEdit />} />
+
         </Routes>
       </Container>
       <Footer />

@@ -7,6 +7,12 @@ export const Cont = styled.div`
   margin: 0 auto;
   flex-wrap: wrap;
 
+  .ll{
+    display: flex;
+    justify-content: space-between;
+    padding: 4em;
+  }
+
   .start {
     justify-content: flex-start;
     display: flex;

@@ -20,8 +20,10 @@ export const Nav = styled.nav`
     display: flex;
     list-style: none;
     align-items: center;
+    padding-left: 50em;
 
     .item {
+      display: flex;
       margin-right: 1em;
 
       a {

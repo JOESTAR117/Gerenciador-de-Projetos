@@ -10,7 +10,7 @@ import Container from "../../components/layout/Container/Container";
 import ProjectForm from "../../project/ProjectForm/ProjectForm";
 import Message from "../../components/layout/Message/Message";
 import ServiceForm from "../../components/layout/Service/ServiceForm";
-import ServiceCard from "../../components/layout/Service/ServiceCard"
+import ServiceCard from "../../components/layout/Service/ServiceCard";
 
 function ProjectEdit() {
   const { id } = useParams();
@@ -92,13 +92,37 @@ function ProjectEdit() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setShowServiceForm(false)
+        setShowServiceForm(false);
       })
       .catch((err) => console.error(err.message));
   }
 
-  function removeService(){
+  function removeService(id, cost) {
+    setMessage('')
+    const serviceUpdate = project.services.filter(
+      (service) => service.id !== id
+    );
 
+    const projectUpdate = project;
+
+    projectUpdate.services = serviceUpdate;
+    projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost);
+
+    fetch(`http://localhost:5000/projects/${projectUpdate.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(projectUpdate),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(projectUpdate);
+        setServices(serviceUpdate);
+        setMessage("Serviço removido com sucesso!");
+        setType("success");
+      })
+      .catch((error) => console.error(error.message));
   }
 
   function toggleProjectForm() {
@@ -165,16 +189,15 @@ function ProjectEdit() {
             <Container customClass="start">
               {services.length > 0 &&
                 services.map((service) => (
-                    <ServiceCard 
+                  <ServiceCard
                     id={service.id}
                     name={service.name}
                     cost={service.cost}
                     description={service.description}
                     key={service.id}
                     handleRemove={removeService}
-                    />
-                ))
-              }
+                  />
+                ))}
 
               {services.length === 0 && <p>Não há serviços cadastrados</p>}
             </Container>
